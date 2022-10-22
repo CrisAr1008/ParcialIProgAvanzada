@@ -1,13 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Control;
+
+import Modelo.Queso;
 
 /**
  *
- * @author CRISTIAN
+ * 
  */
 public class Conexion {
+
+    public Conexion() {     
+        //try {} catch(SQLException){}
+    }
     
+    public Queso Consultar(String consulta){ 
+        Queso queso = new Queso();//modificar para q tome los valores de la consulta
+        return queso;
+    }
+    
+    public void Insertar(Queso queso){}
+    
+    public void Eliminar(int ID){}
+    
+    public void Modificar(Queso queso){}  
+    
+    public int getDBSize (){
+        
+        return 0;
+    }
 }
