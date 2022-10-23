@@ -1,0 +1,20 @@
+Sun Oct 23 10:57:54 COT 2022 : Servidor de red Apache Derby: Se ha iniciado 10.16.1.1 - (1901046) y está listo para aceptar las conexiones en el puerto 1527
+----------------------------------------------------------------
+Sun Oct 23 11:07:32 COT 2022:
+ Iniciando instancia a816c00e-0184-0590-9c3b-fffffdf9672c de Derby, versión The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): 
+en el directorio de base de datos C:\Users\CRISTIAN\Documents\NetBeansProjects\ParcialProgAI con el cargador de clases jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44
+Cargado desde file:/C:/Users/CRISTIAN/Desktop/setups/Setups/db-derby-10.16.1.1-bin/db-derby-10.16.1.1-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=18.0.2.1+1-1
+user.dir=C:\Users\CRISTIAN\Desktop\setups\Setups\db-derby-10.16.1.1-bin\db-derby-10.16.1.1-bin
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\CRISTIAN\Documents\NetBeansProjects
+Cargador de clases de base de datos iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Oct 23 12:17:26 COT 2022: cerrando motor de Derby
+----------------------------------------------------------------
+Sun Oct 23 12:17:26 COT 2022:
+Cerrando la instancia a816c00e-0184-0590-9c3b-fffffdf9672c en el directorio de base de datos C:\Users\CRISTIAN\Documents\NetBeansProjects\ParcialProgAI con cargador de clases jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44
+----------------------------------------------------------------
