@@ -128,13 +128,20 @@ public class QuesoDAO {
         }
         return false;
     }
-
-
-
-
-
-    
-    
-    
-    
+     
+    public int getDBSize(){
+        String sentencia ="SELECT COUNT(*) FROM QUESO";
+        try{
+            con = Conexion.getConexion();
+            st = con.createStatement();
+            int rowCount = st.executeUpdate(sentencia);
+            st.close();
+            Conexion.desconectar();
+            return rowCount;
+        }catch(SQLException ex)
+        {            
+            System.out.println(ex);
+            return 0;
+        }
+    }
 }

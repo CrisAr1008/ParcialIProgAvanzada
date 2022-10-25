@@ -1,19 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 import Control.Conexion.Conexion;
 import Control.DAO.QuesoDAO;
 import com.sun.jdi.connect.spi.Connection;
 
-
 /**
  *
- * @author CRISTIAN
+ *
  */
 public class QuesoVO {
+
     private int id;
     private String nombre;
     private String tipoLeche;
@@ -22,12 +18,9 @@ public class QuesoVO {
     private String textura;
     private String gusto;
     private String tratLeche;
-    
-    
-
 
     public QuesoVO() {
-    }       
+    }
 
     public QuesoVO(int id, String nombre, String tipoLeche, String grasa, String maduracion, String textura, String gusto, String tratLeche) {
         this.id = id;
@@ -39,8 +32,6 @@ public class QuesoVO {
         this.gusto = gusto;
         this.tratLeche = tratLeche;
     }
-    
-    
 
     public int getID() {
         return id;
@@ -50,8 +41,6 @@ public class QuesoVO {
         this.id = ID;
     }
 
-    
-    
     public String getNombre() {
         return nombre;
     }
@@ -60,8 +49,6 @@ public class QuesoVO {
         this.nombre = Nombre;
     }
 
-    
-    
     public String getTipoLeche() {
         return tipoLeche;
     }
@@ -109,6 +96,5 @@ public class QuesoVO {
     public void setTratLeche(String TratLeche) {
         this.tratLeche = TratLeche;
     }
-    
-    
+
 }
