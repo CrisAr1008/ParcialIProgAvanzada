@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Control.DAO;
 
 import java.sql.Connection;
@@ -14,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author CRISTIAN
+ * 
  */
 public class QuesoDAO {
     
@@ -33,7 +29,7 @@ public class QuesoDAO {
         try {
             con = Conexion.getConexion();
             st = con.createStatement();
-            String insercion = "INSERT INTO Estudiantes VALUES(" + queso.getID() + ",'" + queso.getNombre() 
+            String insercion = "INSERT INTO Estudiantes VALUES('" + queso.getNombre() 
                     + "','" + queso.getTipoLeche() + "', '"+queso.getGrasa()+"', '"+queso.getGrasa()+"',"
                     + "'"+ queso.getMaduracion() +"', '"+ queso.getTextura()+"','"+ queso.getTextura()+"'"
                     + ",'"+ queso.getGusto() +"', '"+queso.getTratLeche()+"');";
@@ -143,5 +139,20 @@ public class QuesoDAO {
             System.out.println(ex);
             return 0;
         }
+    }
+    
+    public boolean cleanDB() {
+        String consulta = "DELETE FROM QUESO ";
+        try {
+            con = Conexion.getConexion();
+            st = con.createStatement();
+            st.executeUpdate(consulta);
+            st.close();
+            Conexion.desconectar();
+            return true;
+        } catch (SQLException ex) {
+            System.out.println("No se pudo realizar la eliminacion");
+        }
+        return false;
     }
 }

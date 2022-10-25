@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author CRISTIAN
+ * 
  */
 public class Conexion {
     private static Connection cn = null;
