@@ -1,13 +1,14 @@
-
 package Vista;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
- * 
+ *
  */
 public class Ventana extends javax.swing.JFrame {
 
@@ -27,42 +28,94 @@ public class Ventana extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        BtnAgregar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        comboBoxGusto = new javax.swing.JComboBox<>();
+        comboBoxMaduracion = new javax.swing.JComboBox<>();
+        comboBoxTipoLeche = new javax.swing.JComboBox<>();
+        comboBoxGrasa = new javax.swing.JComboBox<>();
+        comboBoxTratamiento = new javax.swing.JComboBox<>();
+        comboBoxTextura = new javax.swing.JComboBox<>();
+        btnAgregar = new javax.swing.JButton();
+        btnConsultar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
+        txtNombre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TablaQuesos = new javax.swing.JTable();
+        comboBoxBusqueda = new javax.swing.JComboBox<>();
+        txtBusqueda = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        btnFinalizar = new javax.swing.JButton();
+        lblWarnings = new javax.swing.JLabel();
+        BtnEditar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gestor de Quesos");
+        setPreferredSize(new java.awt.Dimension(960, 472));
+        setResizable(false);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxGusto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---" }));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxMaduracion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---" }));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxTipoLeche.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---" }));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxGrasa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---" }));
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxTratamiento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---" }));
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox6.setEnabled(false);
+        comboBoxTextura.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---" }));
 
-        BtnAgregar.setText("jButton1");
+        btnAgregar.setText("Insertar");
 
-        jButton2.setText("jButton2");
+        btnConsultar.setText("Buscar");
 
-        jButton3.setText("jButton3");
+        btnLimpiar.setText("Limpiar");
 
-        jTextField1.setText("jTextField1");
+        TablaQuesos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Eliminar"
+            }
+        ));
+        jScrollPane1.setViewportView(TablaQuesos);
 
-        jLabel1.setText("jLabel1");
+        comboBoxBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---" }));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setText("Gestor de Quesos");
+
+        jLabel3.setText("Tipo de Queso:");
+
+        jLabel4.setText("Tipo de Leche:");
+
+        jLabel5.setText("Grasa");
+
+        jLabel6.setText("Maduración");
+
+        jLabel7.setText("Textura");
+
+        jLabel8.setText("Gusto");
+
+        jLabel9.setText("Tratamiento ");
+
+        btnFinalizar.setText("Finalizar");
+
+        BtnEditar.setText("Editar");
+        BtnEditar.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,100 +124,271 @@ public class Ventana extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                        .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel5)
+                                        .addComponent(jLabel6)
+                                        .addComponent(jLabel7)
+                                        .addComponent(jLabel8)
+                                        .addComponent(jLabel9))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(comboBoxTratamiento, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(comboBoxTextura, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(comboBoxMaduracion, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(comboBoxGrasa, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(comboBoxTipoLeche, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(comboBoxGusto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(BtnAgregar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton3))
+                                .addGap(3, 3, 3)
+                                .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(17, 17, 17)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(BtnEditar)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblWarnings)
+                                        .addGap(260, 260, 260)
+                                        .addComponent(btnFinalizar))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(comboBoxBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(btnConsultar))
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel1))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(jLabel1)))
-                .addContainerGap(96, Short.MAX_VALUE))
+                        .addGap(86, 86, 86)
+                        .addComponent(btnAgregar)
+                        .addGap(96, 96, 96)
+                        .addComponent(btnLimpiar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 450, Short.MAX_VALUE)
+                .addComponent(jLabel1))
+            .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnAgregar)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(43, 43, 43))
+                .addComponent(jLabel2)
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(comboBoxBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnConsultar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(btnFinalizar)
+                                .addComponent(btnLimpiar)
+                                .addComponent(btnAgregar)
+                                .addComponent(BtnEditar))
+                            .addComponent(lblWarnings)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(comboBoxTipoLeche, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(comboBoxGrasa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(comboBoxMaduracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(comboBoxTextura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(comboBoxGusto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(comboBoxTratamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-  
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnAgregar;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
+    private javax.swing.JButton BtnEditar;
+    private javax.swing.JTable TablaQuesos;
+    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnConsultar;
+    private javax.swing.JButton btnFinalizar;
+    private javax.swing.JButton btnLimpiar;
+    private javax.swing.JComboBox<String> comboBoxBusqueda;
+    private javax.swing.JComboBox<String> comboBoxGrasa;
+    private javax.swing.JComboBox<String> comboBoxGusto;
+    private javax.swing.JComboBox<String> comboBoxMaduracion;
+    private javax.swing.JComboBox<String> comboBoxTextura;
+    private javax.swing.JComboBox<String> comboBoxTipoLeche;
+    private javax.swing.JComboBox<String> comboBoxTratamiento;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblWarnings;
+    private javax.swing.JTextField txtBusqueda;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 
-    public JComboBox<String> getjComboBox1() {
-        return jComboBox1;
-    }
-
-    public void setjComboBox1(JComboBox<String> jComboBox1) {
-        this.jComboBox1 = jComboBox1;
-    }
-
     public JButton getBtnAgregar() {
-        return BtnAgregar;
+        return btnAgregar;
     }
 
-    public void setBtnAgregar(JButton BtnAgregar) {
-        this.BtnAgregar = BtnAgregar;
+    public void setBtnAgregar(JButton btnAgregar) {
+        this.btnAgregar = btnAgregar;
     }
 
-    public JLabel getjLabel1() {
-        return jLabel1;
+    public JButton getBtnConsultar() {
+        return btnConsultar;
     }
 
-    public void setjLabel1(JLabel jLabel1) {
-        this.jLabel1 = jLabel1;
+    public void setBtnConsultar(JButton btnConsultar) {
+        this.btnConsultar = btnConsultar;
     }
 
-    
+    public JButton getBtnLimpiar() {
+        return btnLimpiar;
+    }
+
+    public void setBtnLimpiar(JButton btnLimpiar) {
+        this.btnLimpiar = btnLimpiar;
+    }
+
+    public JComboBox<String> getComboBoxBusqueda() {
+        return comboBoxBusqueda;
+    }
+
+    public void setComboBoxBusqueda(JComboBox<String> comboBoxBusqueda) {
+        this.comboBoxBusqueda = comboBoxBusqueda;
+    }
+
+    public JComboBox<String> getComboBoxGrasa() {
+        return comboBoxGrasa;
+    }
+
+    public void setComboBoxGrasa(JComboBox<String> comboBoxGrasa) {
+        this.comboBoxGrasa = comboBoxGrasa;
+    }
+
+    public JComboBox<String> getComboBoxGusto() {
+        return comboBoxGusto;
+    }
+
+    public void setComboBoxGusto(JComboBox<String> comboBoxGusto) {
+        this.comboBoxGusto = comboBoxGusto;
+    }
+
+    public JComboBox<String> getComboBoxMaduracion() {
+        return comboBoxMaduracion;
+    }
+
+    public void setComboBoxMaduracion(JComboBox<String> comboBoxMaduracion) {
+        this.comboBoxMaduracion = comboBoxMaduracion;
+    }
+
+    public JComboBox<String> getComboBoxTextura() {
+        return comboBoxTextura;
+    }
+
+    public void setComboBoxTextura(JComboBox<String> comboBoxTextura) {
+        this.comboBoxTextura = comboBoxTextura;
+    }
+
+    public JComboBox<String> getComboBoxTipoLeche() {
+        return comboBoxTipoLeche;
+    }
+
+    public void setComboBoxTipoLeche(JComboBox<String> comboBoxTipoLeche) {
+        this.comboBoxTipoLeche = comboBoxTipoLeche;
+    }
+
+    public JComboBox<String> getComboBoxTratamiento() {
+        return comboBoxTratamiento;
+    }
+
+    public void setComboBoxTratamiento(JComboBox<String> comboBoxTratamiento) {
+        this.comboBoxTratamiento = comboBoxTratamiento;
+    }
+
+    public JTextField getTxtBusqueda() {
+        return txtBusqueda;
+    }
+
+    public void setTxtBusqueda(JTextField txtBusqueda) {
+        this.txtBusqueda = txtBusqueda;
+    }
+
+    public JTextField getTxtNombre() {
+        return txtNombre;
+    }
+
+    public void setTxtNombre(JTextField txtNombre) {
+        this.txtNombre = txtNombre;
+    }
+
+    public JButton getBtnFinalizar() {
+        return btnFinalizar;
+    }
+
+    public void setBtnFinalizar(JButton btnFinalizar) {
+        this.btnFinalizar = btnFinalizar;
+    }
+
+    public JLabel getLblWarnings() {
+        return lblWarnings;
+    }
+
+    public void setLblWarnings(JLabel lblWarnings) {
+        this.lblWarnings = lblWarnings;
+    }
+
+    public JButton getBtnEditar() {
+        return BtnEditar;
+    }
+
+    public void setBtnEditar(JButton BtnEditar) {
+        this.BtnEditar = BtnEditar;
+    }
+
+    public JTable getTablaQuesos() {
+        return TablaQuesos;
+    }
+
+    public void setTablaQuesos(JTable TablaQuesos) {
+        this.TablaQuesos = TablaQuesos;
+    }
+
 }
